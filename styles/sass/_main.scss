@@ -1,0 +1,32 @@
+.partWindow {
+    background-color: #000000;
+    .rowOne, .rowTwo {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .imageOne, .imageTwo {
+            width:50%;
+            height: auto;
+        }
+        .textOne, .textTwo {
+            flex-basis: 35%;
+            align-self: center;
+            h2 {
+                @include fontstyle(4.2rem,normal,2.9rem);
+                padding: 20px 0;
+            }
+            p {
+                @include fontstyle(2.0rem,normal,2.9rem);
+                padding-bottom: 20px;
+            }
+            button {
+                padding: 15px 30px;
+                @include fontstyle(2.0rem,normal,2.9rem);
+                @include buttonstyle(15px 30px,#4a4a4a, $squashcolor);
+                text-transform: uppercase;
+                border: none;
+            }
+        }
+    }
+
+}

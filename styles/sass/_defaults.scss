@@ -1,15 +1,43 @@
+@mixin fontstyle($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin buttonstyle($padding, $background, $color) {
+    padding: $padding;
+    background-color: $background;
+    color: $color;
+}
+
+$headerfont: 'Pacifico', cursive;
+$textfont: 'Catamaran', sans-serif;
+$squashcolor: #F2A11C;
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
 h1, h2 {
-    font-family: 'Pacifico', cursive;;
+    font-family: $headerfont;
 }
 
 p, a {
-    font-family: 'Catamaran', sans-serif;
+    font-family: $textfont;
+}
+
+i {
+    font-size: 2.0rem;
+    color: $squashcolor;
 }
 
 a {
     text-decoration: none;
+    @include fontstyle(1.8rem,bold,2.9rem);
     color: #FFFFFF;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 29px;
 }
