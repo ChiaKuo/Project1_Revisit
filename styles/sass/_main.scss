@@ -9,7 +9,7 @@
             height: auto;
         }
         .textOne, .textTwo {
-            flex-basis: 35%;
+            flex-basis: 30%;
             align-self: center;
             h2 {
                 @include fontstyle(4.2rem,normal,2.9rem);
@@ -20,7 +20,6 @@
                 padding-bottom: 20px;
             }
             button {
-                padding: 15px 30px;
                 @include fontstyle(2.0rem,normal,2.9rem);
                 @include buttonstyle(15px 30px,#4a4a4a, $squashcolor);
                 text-transform: uppercase;
@@ -29,4 +28,31 @@
         }
     }
 
+}
+
+.blogFlex {
+    display: flex;
+    justify-content: space-between;
+    .blogText {
+        padding: 120px 20px;
+        width: 70%;
+        h2 {
+            @include fontstyle(4.2rem,normal,2.9rem);
+        }
+        p {
+            @include fontstyle(2.0rem,normal,2.9rem);
+            padding: 30px 0;
+        }
+        button {
+            @include fontstyle(2.0rem,normal,2.9rem);
+            @include buttonstyle(15px 30px,#4a4a4a, $squashcolor);
+            text-transform: uppercase;
+            border: none;
+        }
+    }
+    .blogImage {
+        width: 30%;
+        padding: 100px 20px;
+        height: auto;
+    }
 }
